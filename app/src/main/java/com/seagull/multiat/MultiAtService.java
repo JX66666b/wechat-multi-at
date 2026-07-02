@@ -340,10 +340,12 @@ public class MultiAtService extends AccessibilityService {
         try {
             // 保存当前剪贴板
             ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-            ClipData savedClip = null;
+            final ClipData savedClip;
             try {
                 savedClip = clipboard.getPrimaryClip();
-            } catch (Exception ignored) {}
+            } catch (Exception ignored) {
+                savedClip = null;
+            }
 
             // 设置@"到剪贴板
             ClipData atClip = ClipData.newPlainText("at", "@");
