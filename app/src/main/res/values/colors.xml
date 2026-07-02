@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#666666</color>
+    <color name="btn_primary">#2196F3</color>
+    <color name="btn_wechat">#07C160</color>
+    <color name="link">#1976D2</color>
+    <color name="overlay_bg">#EE2196F3</color>
+    <color name="overlay_active">#4407C160</color>
+    <color name="badge_bg">#FF5252</color>
+</resources>

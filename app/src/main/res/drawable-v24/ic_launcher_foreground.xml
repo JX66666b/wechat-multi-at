@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 背景圆 -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+    <!-- 海鸥 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,52C22,52 32,42 40,48C46,52 54,60 54,60L54,60C54,60 62,52 68,48C76,42 86,52 86,52C86,52 78,64 74,68C68,72 54,74 54,74L54,74C54,74 40,72 34,68C30,64 22,52 22,52Z" />
+    <!-- @ -->
+    <path
+        android:fillColor="#81D4FA"
+        android:pathData="M76,44C76,44 82,48 82,54C82,60 76,62 72,58C68,54 70,46 76,44C78,43 80,44 80,47" />
+</vector>
