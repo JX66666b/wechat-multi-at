@@ -11,11 +11,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- 标题区 -->
+        <!-- 标题 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp"
             android:gravity="center_vertical">
@@ -33,30 +32,57 @@
                 android:id="@+id/tv_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="v1.0.0"
+                android:text="v1.0"
                 android:textSize="12sp"
-                android:textColor="#666666" />
+                android:textColor="#999" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="微信群聊 @ 多选增强工具"
+            android:text="微信群聊 @ 多选增强 · 自动搜索续接"
             android:textSize="14sp"
-            android:textColor="#666666"
-            android:layout_marginBottom="8dp" />
+            android:textColor="#666"
+            android:layout_marginBottom="16dp" />
 
+        <!-- 状态 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="检查中..."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开启后状态栏会有通知图标，点击通知可开关"
+                android:textSize="12sp"
+                android:textColor="#999" />
+        </LinearLayout>
+
+        <!-- 激活方式 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="无需Root，无需Xposed，通过无障碍服务实现"
-            android:textSize="12sp"
-            android:textColor="#999999"
-            android:layout_marginBottom="24dp" />
+            android:text="选择一种激活方式："
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="12dp" />
 
-        <!-- 步骤1: 无障碍服务 -->
+        <!-- 方式1: 无障碍 -->
         <LinearLayout
-            android:id="@+id/card_accessibility"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -67,8 +93,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:layout_width="32dp"
@@ -84,43 +110,32 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="开启无障碍服务"
+                    android:text="无障碍服务"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#1A1A1A"
-                    android:layout_marginStart="12dp" />
-
-                <TextView
-                    android:id="@+id/tv_accessibility_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="未开启"
-                    android:textSize="13sp"
-                    android:textColor="#FF0000" />
+                    android:layout_marginStart="12dp"
+                    android:textColor="#1A1A1A" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="进入 设置 → 无障碍 → 已安装的服务 → 海鸥 Multi-@ → 开启"
-                android:textSize="12sp"
-                android:textColor="#666666"
-                android:layout_marginTop="8dp"
+                android:text="最简单的方式，无需电脑。进入设置开启即可"
+                android:textSize="13sp"
+                android:textColor="#666"
                 android:layout_marginBottom="12dp" />
 
             <Button
-                android:id="@+id/btn_open_accessibility"
+                android:id="@+id/btn_open_settings"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:text="去开启无障碍服务"
                 android:textAllCaps="false"
                 android:backgroundTint="#2196F3" />
-
         </LinearLayout>
 
-        <!-- 步骤2: 悬浮窗权限 -->
+        <!-- 方式2: ADB命令 -->
         <LinearLayout
-            android:id="@+id/card_overlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -131,8 +146,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:layout_width="32dp"
@@ -148,49 +163,104 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="悬浮窗权限"
+                    android:text="ADB 命令"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#1A1A1A"
-                    android:layout_marginStart="12dp" />
-
-                <TextView
-                    android:id="@+id/tv_overlay_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="未授权"
-                    android:textSize="13sp"
-                    android:textColor="#FF0000" />
+                    android:layout_marginStart="12dp"
+                    android:textColor="#1A1A1A" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="用于显示浮动控制按钮（用来开关多选模式）"
-                android:textSize="12sp"
-                android:textColor="#666666"
-                android:layout_marginTop="8dp"
+                android:text="电脑连接手机USB调试后执行，无需手动翻设置"
+                android:textSize="13sp"
+                android:textColor="#666"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tv_adb_command"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#F5F5F5"
+                android:text="adb shell ..."
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textColor="#333"
+                android:lineSpacingExtra="3dp"
                 android:layout_marginBottom="12dp" />
 
             <Button
-                android:id="@+id/btn_open_overlay"
+                android:id="@+id/btn_copy_adb"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-                android:text="授予悬浮窗权限"
+                android:text="复制 ADB 命令"
                 android:textAllCaps="false"
-                android:backgroundTint="#2196F3" />
-
+                android:backgroundTint="#FF9800" />
         </LinearLayout>
 
-        <!-- 使用说明 -->
+        <!-- 方式3: Shizuku -->
         <LinearLayout
-            android:id="@+id/card_usage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
             android:background="@drawable/card_bg"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/circle_step_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shizuku"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#1A1A1A" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通过Shizuku授权，在手机上直接激活（需装Shizuku App）"
+                android:textSize="13sp"
+                android:textColor="#666"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_shizuku"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="通过 Shizuku 激活"
+                android:textAllCaps="false"
+                android:backgroundTint="#9C27B0" />
+        </LinearLayout>
+
+        <!-- 打开微信 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginBottom="16dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -199,49 +269,35 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#1A1A1A"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. 确保以上两步都已开启\n2. 打开微信群聊\n3. 点击悬浮球上的海鸥图标\n4. 输入@选择第一个人\n5. 之后会自动触发下一个@，继续选人\n6. 选完后再次点击海鸥停止\n7. 发送消息"
-                android:textSize="14sp"
-                android:textColor="#666666"
-                android:lineSpacingExtra="4dp" />
+                android:text="1. 开启服务后打开微信群聊\n2. 输入 @ + 关键词 搜索联系人\n3. 选完一个人 → 自动续接 @ + 关键词\n4. 继续选下一个人...\n5. 选完了下拉通知栏点「关闭」\n\n提示：通知栏会显示 🟢/🔴 状态"
+                android:textSize="13sp"
+                android:textColor="#666"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="12dp" />
 
+            <Button
+                android:id="@+id/btn_open_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="打开微信"
+                android:textAllCaps="false"
+                android:backgroundTint="#07C160" />
         </LinearLayout>
 
-        <!-- 打开微信按钮 -->
-        <Button
-            android:id="@+id/btn_open_wechat"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="打开微信"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:backgroundTint="#07C160"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="12dp" />
-
-        <!-- 开源信息 -->
+        <!-- Footer -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="开源项目 · 海鸥出品"
             android:textSize="12sp"
-            android:textColor="#999999"
+            android:textColor="#999"
             android:gravity="center"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="openGitHub" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="有问题？提 Issue ->"
-            android:textSize="12sp"
-            android:textColor="#1976D2"
-            android:gravity="center"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="32dp"
             android:onClick="openGitHub" />
 
