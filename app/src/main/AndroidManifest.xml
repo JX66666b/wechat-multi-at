@@ -9,6 +9,11 @@
     <!-- 剪贴板读取（用于自动粘贴@） -->
     <uses-permission android:name="android.permission.READ_CLIPBOARD" />
 
+    <!-- Android 11+ 查询微信包名需要 -->
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,8 +44,6 @@
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessibility_service_config" />
         </service>
-
-        <!-- 无需额外广播接收器，通知直接控制服务 -->
 
     </application>
 </manifest>
