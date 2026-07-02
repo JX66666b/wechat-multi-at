@@ -131,7 +131,6 @@ public class MultiAtService extends AccessibilityService {
         Log.d(TAG, "服务被中断");
     }
 
-    @Override
     public void onServiceChanged() {
         AccessibilityServiceInfo info = getServiceInfo();
         Log.d(TAG, "服务配置: " +
