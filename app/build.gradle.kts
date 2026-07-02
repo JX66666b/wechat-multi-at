@@ -24,13 +24,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
-    buildFeatures {
-        buildConfig = true
-    }
 }
 
+// 零外部依赖 - 全用Android原生API
 dependencies {
-    // Shizuku API - 用于在app内一键激活无障碍服务
-    implementation("moe.shizuku:api:13.1.5")
 }
